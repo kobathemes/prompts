@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- saved from url=(0232)file:///Users/bass/Library/Application%20Support/Claude/local-agent-mode-sessions/d66ab707-fb77-456f-91ec-7e71c272270e/92d6a699-ca5a-4718-8f48-a28bc50ba8dd/local_fc86bf2c-6612-43f2-a327-58166d9410f8/outputs/6-prompts-sales-page.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your First Digital Product with Claude, Live in 40 Minutes</title>
+<meta name="description" content="Launch your first digital product with Claude in about 40 minutes. The exact workflow behind digital products making €300 a day. €17, instant access.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+  /* ============ MOBILE-FIRST ============ */
+  :root{
+    --ink:#111114;
+    --body:#4B4B55;
+    --muted:#8A8A94;
+    --bg:#FFFFFF;
+    --surface:#F7F7F5;
+    --line:#E8E8E4;
+    --accent:#FF90E8;
+    --accent-soft:#FFE9FA;
+    --lime:#C7F74A;
+    --lime-soft:#F3FCD9;
+    --r:16px;
+    --shadow:0 1px 2px rgba(17,17,20,.05),0 8px 24px rgba(17,17,20,.06);
+    --shadow-lg:0 2px 4px rgba(17,17,20,.06),0 16px 48px rgba(17,17,20,.12);
+    --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--font);background:var(--bg);color:var(--body);
+    font-size:16px;line-height:1.65;padding-bottom:88px; /* room for sticky mobile CTA */
+  }
+  ::selection{background:var(--accent-soft)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+  h1,h2,h3{color:var(--ink);font-weight:800;letter-spacing:-.025em;line-height:1.15}
+  .marker{
+    background-image:linear-gradient(var(--lime),var(--lime));
+    background-repeat:no-repeat;background-position:0 72%;background-size:0% 32%;
+    transition:background-size .8s cubic-bezier(.25,.7,.25,1) .5s;
+  }
+  .marker.on{background-size:100% 32%}
+
+  /* ---------- NAV ---------- */
+  .nav-bar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{display:flex;justify-content:space-between;align-items:center;height:60px}
+  .logo{font-weight:800;font-size:.95rem;color:var(--ink);letter-spacing:-.01em}
+  .logo span{color:var(--muted);font-weight:600}
+  .nav-cta{
+    font-weight:600;font-size:.88rem;color:#fff;background:var(--ink);
+    text-decoration:none;padding:10px 18px;border-radius:99px;
+    transition:opacity .15s;
+  }
+  .nav-cta:hover{opacity:.85}
+
+  /* ---------- HERO ---------- */
+  header{padding:48px 0 40px;text-align:left}
+  .trust-chip{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .trust-chip img{
+    width:48px;height:48px;border-radius:50%;object-fit:cover;
+    border:2px solid #fff;box-shadow:var(--shadow);
+  }
+  .trust-chip .t-name{font-weight:700;font-size:.9rem;color:var(--ink);line-height:1.3}
+  .trust-chip .t-sub{font-size:.78rem;color:var(--muted);line-height:1.3}
+  .card-photo{
+    width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 30%;
+    border-radius:12px;margin-bottom:16px;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--lime-soft);color:#3d5406;border:1px solid #D9F096;
+    font-weight:600;font-size:.78rem;padding:7px 14px;border-radius:99px;margin-bottom:20px;
+  }
+  h1{font-size:clamp(1.9rem,6.5vw,3.1rem);margin-bottom:16px}
+  .sub{font-size:1.02rem;margin-bottom:26px;max-width:560px}
+  .sub strong{color:var(--ink);font-weight:600}
+
+  .checks{list-style:none;display:grid;gap:13px;margin-bottom:32px}
+  .checks li{display:flex;gap:12px;align-items:flex-start;font-size:.96rem;color:var(--ink);font-weight:500}
+  .checks li::before{
+    content:"✓";flex-shrink:0;width:22px;height:22px;border-radius:50%;
+    background:var(--lime);color:var(--ink);font-weight:700;font-size:.75rem;
+    display:inline-flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+
+  /* ---------- BUY CARD ---------- */
+  .buy-card{
+    background:var(--bg);border:1px solid var(--line);border-radius:var(--r);
+    box-shadow:var(--shadow-lg);padding:28px 24px;
+  }
+  .stars{color:#F5A623;font-size:.95rem;letter-spacing:2px;margin-bottom:4px}
+  .stars small{color:var(--muted);font-family:var(--font);letter-spacing:0;font-weight:600;font-size:.78rem;margin-left:6px}
+  .buy-card h3{font-size:1.15rem;margin:6px 0 4px}
+  .promise{font-size:.9rem;color:var(--muted);margin-bottom:18px}
+  .price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:18px}
+  .price{font-size:2.4rem;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+  .price-note{font-size:.85rem;color:var(--muted)}
+  .buy-btn{
+    display:flex;align-items:center;justify-content:center;min-height:52px;
+    width:100%;background:var(--ink);color:#fff;text-decoration:none;
+    font-weight:700;font-size:1rem;border-radius:12px;
+    transition:transform .15s,box-shadow .15s;
+  }
+  .buy-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+  .buy-btn:active{transform:translateY(0)}
+  .under-btn{margin-top:12px;text-align:center;font-size:.8rem;color:var(--muted)}
+  .under-btn a{color:var(--muted)}
+
+  /* ---------- PROOF STRIP ---------- */
+  .proof{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .proof-grid{display:grid;grid-template-columns:1fr;gap:0}
+  .proof-item{padding:22px 0;text-align:center;border-bottom:1px solid var(--line)}
+  .proof-item:last-child{border-bottom:none}
+  .proof-item b{display:block;font-size:1.5rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+  .proof-item span{font-size:.8rem;color:var(--muted);font-weight:500}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:56px 0}
+  .kicker{
+    display:inline-block;font-weight:700;font-size:.72rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:14px;
+  }
+  h2{font-size:clamp(1.5rem,5vw,2.2rem);margin-bottom:14px;max-width:680px}
+  .lead{font-size:1rem;max-width:600px}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+  .about-photo{width:100%;max-width:340px;border-radius:var(--r);box-shadow:var(--shadow-lg)}
+  .about-copy p{margin-bottom:13px;font-size:.97rem}
+  .about-copy strong{color:var(--ink);font-weight:600}
+  .mini-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .mini-stat{
+    background:var(--surface);border:1px solid var(--line);border-radius:99px;
+    padding:7px 14px;font-weight:600;font-size:.8rem;color:var(--ink);
+  }
+
+  /* ---------- REVIEWS ---------- */
+  .reviews-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px}
+  .review{
+    background:var(--bg);border:1px solid var(--line);border-radius:var(--r);
+    box-shadow:var(--shadow);padding:24px 22px;display:flex;flex-direction:column;gap:10px;
+  }
+  .review .stars{margin-bottom:0}
+  .review p{font-size:.94rem;flex:1}
+  .review .name{font-weight:700;font-size:.85rem;color:var(--ink)}
+
+  /* ---------- FINAL CTA ---------- */
+  .final{background:var(--surface);border-top:1px solid var(--line);text-align:center}
+  .final h2{margin-left:auto;margin-right:auto}
+  .final .lead{margin:0 auto 28px}
+  .final .buy-card{max-width:440px;margin:0 auto;text-align:left}
+
+  footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-size:.82rem;color:var(--muted)}
+  footer a{color:var(--muted)}
+
+  /* ---------- STICKY MOBILE CTA ---------- */
+  .mobile-cta{
+    position:fixed;bottom:0;left:0;right:0;z-index:50;
+    background:rgba(255,255,255,.96);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    display:flex;align-items:center;gap:14px;
+  }
+  .mobile-cta .m-price{font-weight:800;font-size:1.25rem;color:var(--ink)}
+  .mobile-cta .m-note{font-size:.72rem;color:var(--muted);line-height:1.2}
+  .mobile-cta a{
+    flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;
+    background:var(--ink);color:#fff;text-decoration:none;font-weight:700;
+    font-size:.95rem;border-radius:12px;
+  }
+
+  /* ---------- ANIMATIONS ---------- */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  header .trust-chip,header .badge,header h1,header .sub,header .checks,header .buy-card{animation:fadeUp .5s ease-out both}
+  header h1{animation-delay:.05s}header .sub{animation-delay:.1s}
+  header .checks{animation-delay:.15s}header .buy-card{animation-delay:.12s}
+
+  /* staggered check-ins */
+  header .checks li{opacity:0;animation:fadeUp .45s ease-out both}
+  header .checks li:nth-child(1){animation-delay:.25s}
+  header .checks li:nth-child(2){animation-delay:.33s}
+  header .checks li:nth-child(3){animation-delay:.41s}
+  header .checks li:nth-child(4){animation-delay:.49s}
+  header .checks li:nth-child(5){animation-delay:.57s}
+
+  /* scroll reveals */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease-out,transform .6s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+  /* card lift on hover */
+  .review{transition:transform .2s ease,box-shadow .2s ease}
+  .review:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+
+  /* CTA shine sweep, runs every few seconds to pull the eye */
+  .buy-btn{position:relative;overflow:hidden}
+  .buy-btn::after{
+    content:"";position:absolute;top:0;bottom:0;left:-80%;width:50%;
+    background:linear-gradient(105deg,transparent,rgba(255,255,255,.35),transparent);
+    transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite;
+  }
+  @keyframes shine{0%,72%{left:-80%}88%,100%{left:130%}}
+
+  /* gentle heartbeat on the sticky mobile CTA button */
+  @keyframes heartbeat{0%,86%,100%{transform:scale(1)}90%{transform:scale(1.03)}94%{transform:scale(1)}}
+  .mobile-cta a{animation:heartbeat 5s ease-in-out infinite;position:relative;overflow:hidden}
+  .mobile-cta a::after{
+    content:"";position:absolute;top:0;bottom:0;left:-80%;width:50%;
+    background:linear-gradient(105deg,transparent,rgba(255,255,255,.3),transparent);
+    transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite;
+  }
+
+  /* sticky mobile CTA slides in only after the hero buy card scrolls away */
+  .mobile-cta{transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .mobile-cta.show{transform:translateY(0)}
+
+  @media (prefers-reduced-motion: reduce){
+    header .trust-chip,header .badge,header h1,header .sub,header .checks,header .buy-card,header .checks li{animation:none;opacity:1}
+    .reveal{opacity:1;transform:none;transition:none}
+    .marker{background-size:100% 32%;transition:none}
+    .buy-btn::after,.mobile-cta a::after{animation:none;display:none}
+    .mobile-cta a{animation:none}
+    .mobile-cta{transform:none;transition:none}
+  }
+
+  /* ============ TABLET & UP ============ */
+  @media(min-width:768px){
+    body{padding-bottom:0}
+    .mobile-cta{display:none}
+    header{padding:72px 0 64px}
+    .proof-grid{grid-template-columns:repeat(3,1fr)}
+    .proof-item{border-bottom:none;border-right:1px solid var(--line);padding:26px 0}
+    .proof-item:last-child{border-right:none}
+    .reviews-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+    section{padding:80px 0}
+    .about-grid{grid-template-columns:.75fr 1.25fr;gap:56px}
+    .about-photo{max-width:none}
+  }
+
+  /* ============ DESKTOP ============ */
+  @media(min-width:1024px){
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start}
+    .buy-card{position:sticky;top:84px}
+    .checks{margin-bottom:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-bar">
+  <div class="wrap">
+    <nav>
+      <div class="logo">Kotryna Bass <span>· Digital Product with Claude</span></div>
+      <a class="nav-cta" href="file:///Users/bass/Library/Application%20Support/Claude/local-agent-mode-sessions/d66ab707-fb77-456f-91ec-7e71c272270e/92d6a699-ca5a-4718-8f48-a28bc50ba8dd/local_fc86bf2c-6612-43f2-a327-58166d9410f8/outputs/6-prompts-sales-page.html#buy">Get access for €17</a>
+    </nav>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="trust-chip">
+          <img src="./index_files/dsc09446_1.jpg" alt="Kotryna Bass">
+          <div>
+            <div class="t-name">Kotryna Bass</div>
+            <div class="t-sub">10,000+ digital products sold · online since 2012</div>
+          </div>
+        </div>
+        <div class="badge">⚡ Instant download · works with Claude's free account</div>
+        <h1>Your first digital product, live and ready to sell <span class="marker on" id="marker">in about 40 minutes.</span></h1>
+        <p class="sub">Not a course. Not a 6-week commitment. Just <strong>six copy-paste Claude prompts</strong>, plus the workflow, pricing strategy and launch sequence behind digital products that bring in <strong>€300 a day</strong>. It's the same system I've refined over 12 years and 10,000+ products sold, now compressed into one afternoon.</p>
+        <ul class="checks">
+          <li>Go from blank page to a product people can actually buy in about 40 minutes</li>
+          <li>Copy my exact Claude prompts word for word. You paste, Claude builds</li>
+          <li>No audience or following required, it works even if nobody knows you yet</li>
+          <li>No tech skills, no website, nothing to figure out</li>
+          <li>Works with Claude's free account, so your only cost is this page</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="buy-card" id="buy">
+          <img class="card-photo" src="./index_files/dsc09446_1.jpg" alt="Kotryna Bass at her desk">
+          <div class="stars">★★★★★ <small>Rated 5 out of 5</small></div>
+          <h3>Your First Digital Product with Claude</h3>
+          <p class="promise">6 copy-paste prompts + workflow + pricing strategy + launch sequence. Everything, instantly.</p>
+          <div class="price-row">
+            <span class="price">€17</span>
+            <span class="price-note">one-time · instant access</span>
+          </div>
+          <a class="buy-btn" href="https://kotrynabass.podia.com/first-digital-product-with-claude/buy">Get Instant Access →</a>
+          <div class="under-btn">Secure checkout · <a href="file:///Users/bass/Library/Application%20Support/Claude/local-agent-mode-sessions/d66ab707-fb77-456f-91ec-7e71c272270e/92d6a699-ca5a-4718-8f48-a28bc50ba8dd/local_fc86bf2c-6612-43f2-a327-58166d9410f8/outputs/6-prompts-sales-page.html#">Privacy Policy</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="proof-item reveal"><b data-count="">€300/day</b><span>what products like this bring in</span></div>
+      <div class="proof-item reveal d1"><b data-count="">10,000+</b><span>digital products sold since 2012</span></div>
+      <div class="proof-item reveal d2"><b data-count="">~40 min</b><span>from idea to live product</span></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="kicker reveal">Why this works</div>
+    <h2 class="reveal">You don't have a creating problem. You have a starting problem.</h2>
+    <p class="lead reveal">Every "make money online" course hands you homework. This hands you the answers. Six prompts, in order. You paste them into Claude and watch your product get written, structured, priced and packaged right in front of you. The first time you see it happen, you'll wonder why anyone does it any other way.</p>
+  </div>
+</section>
+
+<section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <img class="about-photo reveal" src="./index_files/dsc02092.jpg" alt="Kotryna Bass" onerror="this.onerror=null;this.src=&#39;https://static.showit.co/400/SB8wgJGwQragdnduBx8gZQ/168573/dsc02092.jpg&#39;">
+      </div>
+      <div class="about-copy">
+        <div class="kicker reveal">Who's behind this</div>
+        <h2 class="reveal">hey, I'm Kotryna.</h2>
+        <p class="reveal">In 2012, I sat down at a laptop with no audience, no business degree and no idea how to make money online. Just a strong suspicion that trading hours for a salary wasn't the only way to live.</p>
+        <p class="reveal">Digital products were my way out. Since then I've sold over <strong>10,000 of them</strong>, built an e-commerce brand from zero to <strong>€500k in revenue</strong>, and taught <strong>2,000+ students</strong> to build income of their own. Every product used to take me weeks of writing, designing, and second-guessing.</p>
+        <p class="reveal">Then Claude changed the math. What took me weeks now takes under an hour, and the workflow on this page is the exact one I use. Not theory. Not recycled advice. <strong>The actual prompts, in the actual order, from someone who's been selling digital products for twelve years.</strong></p>
+        <div class="mini-stats reveal">
+          <span class="mini-stat">10,000+ products sold</span>
+          <span class="mini-stat">2,000+ students taught</span>
+          <span class="mini-stat">Selling online since 2012</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker reveal">Real buyers, real words</div>
+    <h2 class="reveal">Don't take my word for it.</h2>
+    <!-- Placeholder reviews: replace with real customer quotes (real names + permission) before publishing -->
+    <div class="reviews-grid">
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>"I kept re-reading the first prompt thinking 'it can't be this simple.' Then I pasted it in and just… watched Claude build the thing. I felt like I was cheating."</p>
+        <div class="name">Monika S</div>
+      </div>
+      <div class="review reveal d1">
+        <div class="stars">★★★★★</div>
+        <p>"I've paid for big courses that got me nowhere. This cost less than my lunch and it's the first thing people have actually bought from me. Still processing that, honestly."</p>
+        <div class="name">Jade R</div>
+      </div>
+      <div class="review reveal d2">
+        <div class="stars">★★★★★</div>
+        <p>"Made my product on a Sunday afternoon with a coffee. It was live before dinner. My husband asked what I was so smug about all evening."</p>
+        <div class="name">Elena K</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="reveal">40 minutes from now, you could have a product for sale.</h2>
+    <p class="lead reveal">Or you could still be scrolling. €17. Six prompts. Instant access. Your move.</p>
+    <div class="buy-card reveal">
+      <div class="stars">★★★★★ <small>Rated 5 out of 5</small></div>
+      <h3>Your First Digital Product with Claude</h3>
+      <p class="promise">6 copy-paste prompts + workflow + pricing strategy + launch sequence. Everything, instantly.</p>
+      <div class="price-row">
+        <span class="price">€17</span>
+        <span class="price-note">one-time · instant access</span>
+      </div>
+      <a class="buy-btn" href="https://kotrynabass.podia.com/first-digital-product-with-claude/buy">Get Instant Access →</a>
+      <div class="under-btn">Secure checkout · <a href="file:///Users/bass/Library/Application%20Support/Claude/local-agent-mode-sessions/d66ab707-fb77-456f-91ec-7e71c272270e/92d6a699-ca5a-4718-8f48-a28bc50ba8dd/local_fc86bf2c-6612-43f2-a327-58166d9410f8/outputs/6-prompts-sales-page.html#">Privacy Policy</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Kotryna Bass · <a href="https://kotrynabass.com/">kotrynabass.com</a> · <a href="file:///Users/bass/Library/Application%20Support/Claude/local-agent-mode-sessions/d66ab707-fb77-456f-91ec-7e71c272270e/92d6a699-ca5a-4718-8f48-a28bc50ba8dd/local_fc86bf2c-6612-43f2-a327-58166d9410f8/outputs/6-prompts-sales-page.html#">Privacy Policy</a></div>
+</footer>
+
+<!-- Sticky mobile CTA -->
+<div class="mobile-cta">
+  <div>
+    <div class="m-price">€17</div>
+    <div class="m-note">instant access</div>
+  </div>
+  <a href="https://kotrynabass.podia.com/first-digital-product-with-claude/buy">Get Instant Access →</a>
+</div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // auto-tag section content for scroll reveal
+  if(!reduce){
+    document.querySelectorAll('section .kicker, section h2, section .lead, .about-copy p, .mini-stats, .about-photo, .final .buy-card').forEach(function(el){
+      el.classList.add('reveal');
+    });
+  }
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){
+    if(reduce){el.classList.add('in');}else{io.observe(el);}
+  });
+
+  // headline marker sweep on load
+  var m=document.getElementById('marker');
+  if(m){requestAnimationFrame(function(){m.classList.add('on');});}
+
+  // count-up on proof numbers
+  function countUp(el){
+    var raw=el.textContent;
+    var match=raw.match(/([\d,]+)/);
+    if(!match)return;
+    var target=parseInt(match[1].replace(/,/g,''),10);
+    var prefix=raw.slice(0,match.index);
+    var suffix=raw.slice(match.index+match[1].length);
+    var hasComma=match[1].indexOf(',')>-1;
+    var t0=null,dur=1100;
+    function fmt(n){return hasComma?n.toLocaleString('en-US'):''+n}
+    function step(t){
+      if(!t0)t0=t;
+      var p=Math.min((t-t0)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=prefix+fmt(Math.round(target*eased))+suffix;
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var io2=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        if(!reduce)countUp(e.target);
+        io2.unobserve(e.target);
+      }
+    });
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){io2.observe(el);});
+
+  // sticky mobile CTA appears only after the hero buy card is out of view
+  var buy=document.getElementById('buy');
+  var bar=document.querySelector('.mobile-cta');
+  if(buy&&bar){
+    var io3=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        bar.classList.toggle('show', !e.isIntersecting && window.scrollY>200);
+      });
+    },{threshold:0});
+    io3.observe(buy);
+  }
+})();
+</script>
+
+
+</body></html>
