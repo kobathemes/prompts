@@ -1,226 +1,554 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Your First Digital Product with Claude — Kotryna Bass</title>
-<meta name="description" content="A practical six-prompt guide to help you turn what you already know into a simple digital product, price it and prepare it for launch using Claude.">
-<meta name="theme-color" content="#fbfaf7">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your First Digital Product with Claude, Live in 40 Minutes</title>
+<meta name="description" content="Launch your first digital product with Claude in about 40 minutes. Six copy-paste prompts from 12 years of selling digital products. $17, instant access.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ink:#171716;
-  --body:#53534e;
-  --muted:#7b7b74;
-  --paper:#fbfaf7;
-  --white:#ffffff;
-  --line:#deddd7;
-  --pink:#f49bdc;
-  --pink-soft:#fff0fa;
-  --cream:#f2efe7;
-  --font:"DM Sans",Arial,sans-serif;
-  --serif:"Instrument Serif",Georgia,serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--font);color:var(--body);background:var(--paper);font-size:16px;line-height:1.62;overflow-x:hidden}
-img{display:block;max-width:100%}
-a{color:inherit}
-.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}
-.narrow{width:min(760px,calc(100% - 40px));margin-inline:auto}
-h1,h2,h3{color:var(--ink);font-weight:600;letter-spacing:-.035em;line-height:1.08}
-h1{font-size:clamp(2.75rem,7.4vw,5.8rem);font-weight:500}
-h2{font-size:clamp(2rem,5vw,3.7rem);font-weight:500}
-h3{font-size:1.05rem;letter-spacing:-.015em}
-.serif{font-family:var(--serif);font-weight:400;font-style:italic}
-p{max-width:720px}
-.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--muted)}
-.nav{height:68px;border-bottom:1px solid var(--line);background:rgba(251,250,247,.94);backdrop-filter:blur(12px);position:sticky;top:0;z-index:20}
-.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{text-decoration:none;font-weight:700;color:var(--ink);font-size:.94rem;letter-spacing:-.02em}
-.nav-link{text-decoration:none;font-size:.86rem;font-weight:600;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px}
-.hero{padding:62px 0 74px}
-.hero-grid{display:grid;gap:46px;align-items:center}
-.hero-copy .eyebrow{margin-bottom:18px;display:block}
-.hero-copy h1{max-width:760px;margin-bottom:24px}
-.hero-copy h1 em{font-family:var(--serif);font-weight:400;color:#9e287c}
-.hero-lead{font-size:clamp(1.05rem,2.2vw,1.24rem);max-width:650px;margin-bottom:27px}
-.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 22px;border-radius:5px;text-decoration:none;font-weight:700;font-size:.94rem;background:var(--ink);color:#fff;border:1px solid var(--ink);transition:opacity .15s ease}
-.btn:hover{opacity:.86}
-.text-link{font-weight:600;font-size:.9rem;text-underline-offset:4px}
-.micro{font-size:.76rem;color:var(--muted);margin-top:10px}
-.hero-photo-wrap{position:relative}
-.hero-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 32%;border-radius:4px}
-.photo-note{width:min(290px,78%);background:var(--white);border:1px solid var(--line);padding:15px 17px;position:absolute;left:-18px;bottom:20px;font-size:.82rem;line-height:1.45;color:var(--ink)}
-.photo-note strong{display:block;margin-bottom:3px}
-.cred{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
-.cred-grid{display:grid;grid-template-columns:1fr 1fr}
-.cred-item{padding:21px 14px;text-align:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.cred-item:nth-child(2n){border-right:0}.cred-item:nth-last-child(-n+2){border-bottom:0}
-.cred-item b{display:block;color:var(--ink);font-size:1rem}.cred-item span{font-size:.72rem;color:var(--muted)}
-section{padding:76px 0}
-.note-section{background:var(--white);border-bottom:1px solid var(--line)}
-.note-card{display:grid;gap:26px;align-items:start}
-.note-card h2{max-width:560px}
-.note-copy p{margin-bottom:15px;font-size:1.02rem}
-.note-signoff{font-family:var(--serif);font-size:1.55rem;color:var(--ink);margin-top:22px}
-.steps-head{margin-bottom:34px}.steps-head .eyebrow{display:block;margin-bottom:13px}.steps-head p{margin-top:14px}
-.steps{border-top:1px solid var(--line)}
-.step{display:grid;grid-template-columns:42px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
-.step-num{font-family:var(--serif);font-size:1.4rem;color:#9e287c;line-height:1}
-.step h3{margin-bottom:5px}.step p{font-size:.9rem}
-.offer-section{background:var(--cream);border-block:1px solid var(--line)}
-.offer-layout{display:grid;gap:34px;align-items:start}
-.offer-copy .eyebrow{display:block;margin-bottom:14px}.offer-copy h2{margin-bottom:16px}.offer-copy>p{font-size:1.02rem}
-.guide-card{background:var(--white);border:1px solid var(--line);padding:26px;border-radius:5px}
-.guide-card h3{font-size:1.25rem;margin-bottom:8px}
-.guide-list{list-style:none;margin:20px 0;display:grid;gap:12px}
-.guide-list li{padding-left:25px;position:relative;color:var(--ink);font-size:.91rem}
-.guide-list li::before{content:"✓";position:absolute;left:0;color:#9e287c;font-weight:700}
-.price-line{display:flex;align-items:baseline;gap:9px;margin:22px 0 14px}
-.price{font-size:2.8rem;color:var(--ink);font-weight:700;letter-spacing:-.06em}.old{color:var(--muted);text-decoration:line-through;font-weight:600}.once{font-size:.73rem;color:var(--muted)}
-.bonus{font-size:.81rem;background:var(--pink-soft);border:1px solid #f1c9e5;padding:11px 12px;margin-bottom:13px}
-.guarantee{font-size:.77rem;color:var(--muted);margin-top:11px;line-height:1.45}
-.outcomes{display:grid;gap:17px;margin-top:30px}
-.outcome{padding:18px 0;border-top:1px solid var(--line)}
-.outcome:last-child{border-bottom:1px solid var(--line)}
-.outcome h3{margin-bottom:5px}.outcome p{font-size:.9rem}
-.for-grid{display:grid;gap:26px}
-.for-box{border-top:1px solid var(--line);padding-top:18px}
-.for-box h3{font-size:1.25rem;margin-bottom:14px}
-.for-box ul{list-style:none;display:grid;gap:10px}
-.for-box li{font-size:.92rem;padding-left:22px;position:relative}
-.for-box li::before{position:absolute;left:0;color:#9e287c}.for-box.yes li::before{content:"✓"}.for-box.no li::before{content:"—"}
-.about{background:var(--white);border-block:1px solid var(--line)}
-.about-grid{display:grid;gap:34px;align-items:center}
-.about-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 28%;border-radius:4px}
-.about-copy .eyebrow{display:block;margin-bottom:12px}.about-copy h2{margin-bottom:18px}.about-copy p{margin-bottom:14px}
-.faq details{border-top:1px solid var(--line)}
-.faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;padding:18px 2px;font-weight:600;color:var(--ink);display:flex;justify-content:space-between;gap:16px}
-.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";font-weight:400}.faq details[open] summary::after{content:"−"}
-.faq details p{padding:0 2px 19px;font-size:.92rem}
-.final{padding:88px 0;text-align:center}
-.final h2{margin-inline:auto;max-width:770px}.final p{margin:18px auto 26px;max-width:620px}.final .micro{margin-top:12px}
-footer{border-top:1px solid var(--line);padding:28px 0;font-size:.77rem;color:var(--muted)}
-.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media(min-width:760px){
-  .hero-grid{grid-template-columns:1.15fr .85fr;gap:68px}
-  .cred-grid{grid-template-columns:repeat(4,1fr)}
-  .cred-item{border-bottom:0}.cred-item:nth-child(2n){border-right:1px solid var(--line)}.cred-item:last-child{border-right:0}
-  .note-card{grid-template-columns:.9fr 1.1fr;gap:70px}
-  .offer-layout{grid-template-columns:1.05fr .95fr;gap:72px}
-  .for-grid{grid-template-columns:1fr 1fr;gap:70px}
-  .about-grid{grid-template-columns:.75fr 1.25fr;gap:70px}
-}
-@media(max-width:560px){
-  .wrap,.narrow{width:min(100% - 30px,1120px)}
-  .hero{padding-top:42px}.photo-note{left:12px;bottom:12px}
-  section{padding:62px 0}.brand{font-size:.88rem}.nav-link{font-size:.8rem}
-  .btn{width:100%}.hero-actions{display:block}.text-link{display:inline-block;margin-top:14px}
-}
+  /* ============ MOBILE-FIRST ============ */
+  :root{
+    --ink:#111114;
+    --body:#4B4B55;
+    --muted:#8A8A94;
+    --bg:#FFFFFF;
+    --surface:#F7F7F5;
+    --line:#E8E8E4;
+    --accent:#FF90E8;
+    --accent-soft:#FFE9FA;
+    --lime:#C7F74A;
+    --lime-soft:#F3FCD9;
+    --r:16px;
+    --shadow:0 1px 2px rgba(17,17,20,.05),0 8px 24px rgba(17,17,20,.06);
+    --shadow-lg:0 2px 4px rgba(17,17,20,.06),0 16px 48px rgba(17,17,20,.12);
+    --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--font);background:var(--bg);color:var(--body);
+    font-size:16px;line-height:1.65;padding-bottom:88px; /* room for sticky mobile CTA */
+    overflow-x:clip;
+  }
+  html{overflow-x:clip}
+  ::selection{background:var(--accent-soft)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{color:var(--ink);font-weight:800;letter-spacing:-.025em;line-height:1.15}
+  .marker{
+    background-image:linear-gradient(var(--lime),var(--lime));
+    background-repeat:no-repeat;background-position:0 72%;background-size:0% 32%;
+    transition:background-size .8s cubic-bezier(.25,.7,.25,1) .5s;
+  }
+  .marker.on{background-size:100% 32%}
+  /* ---------- NAV ---------- */
+  .nav-bar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{display:flex;justify-content:space-between;align-items:center;height:60px;gap:12px}
+  .logo{
+    font-weight:800;font-size:.95rem;color:var(--ink);letter-spacing:-.01em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1;
+  }
+  .logo span{color:var(--muted);font-weight:600}
+  .nav-cta{
+    font-weight:600;font-size:.88rem;color:#fff;background:var(--ink);
+    text-decoration:none;padding:10px 18px;border-radius:99px;
+    transition:opacity .15s;white-space:nowrap;flex-shrink:0;
+  }
+  .nav-cta:hover{opacity:.85}
+  /* ---------- HERO ---------- */
+  header{padding:48px 0 40px;text-align:left}
+  .trust-chip{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .trust-chip img{
+    width:48px;height:48px;border-radius:50%;object-fit:cover;
+    border:2px solid #fff;box-shadow:var(--shadow);
+  }
+  .trust-chip .t-name{font-weight:700;font-size:.9rem;color:var(--ink);line-height:1.3}
+  .trust-chip .t-sub{font-size:.78rem;color:var(--muted);line-height:1.3}
+  .card-photo{
+    width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 30%;
+    border-radius:12px;margin-bottom:16px;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;max-width:100%;
+    background:var(--lime-soft);color:#3d5406;border:1px solid #D9F096;
+    font-weight:600;font-size:.78rem;padding:7px 14px;border-radius:99px;margin-bottom:20px;
+    line-height:1.4;
+  }
+  h1{font-size:clamp(1.9rem,6.5vw,3.1rem);margin-bottom:16px}
+  .sub{font-size:1.02rem;margin-bottom:26px;max-width:560px}
+  .sub strong{color:var(--ink);font-weight:600}
+  .checks{list-style:none;display:grid;gap:13px;margin-bottom:32px}
+  .checks li{display:flex;gap:12px;align-items:flex-start;font-size:.96rem;color:var(--ink);font-weight:500}
+  .checks li::before{
+    content:"✓";flex-shrink:0;width:22px;height:22px;border-radius:50%;
+    background:var(--lime);color:var(--ink);font-weight:700;font-size:.75rem;
+    display:inline-flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+  /* ---------- BUY CARD ---------- */
+  .buy-card{
+    background:var(--bg);border:1px solid var(--line);border-radius:var(--r);
+    box-shadow:var(--shadow-lg);padding:28px 24px;
+  }
+  .stars{color:#F5A623;font-size:.95rem;letter-spacing:2px;margin-bottom:4px}
+  .stars small{color:var(--muted);font-family:var(--font);letter-spacing:0;font-weight:600;font-size:.78rem;margin-left:6px}
+  .buy-card h3{font-size:1.15rem;margin:6px 0 4px}
+  .promise{font-size:.9rem;color:var(--muted);margin-bottom:18px}
+  .price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:18px}
+  .price{font-size:2.4rem;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+  .price-old{font-size:1.35rem;font-weight:700;color:var(--muted);text-decoration:line-through;text-decoration-thickness:2px}
+  .price-note{font-size:.85rem;color:var(--muted)}
+  .save-tag{
+    display:inline-block;background:var(--accent-soft);color:#9c1f7a;border:1px solid #F7C6EC;
+    font-weight:700;font-size:.72rem;letter-spacing:.02em;padding:3px 9px;border-radius:99px;margin-bottom:14px;
+  }
+  .guarantee{
+    display:flex;gap:9px;align-items:flex-start;font-size:.82rem;font-weight:600;color:var(--ink);
+    background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-bottom:12px;line-height:1.5;
+  }
+  .guarantee .g-ico{flex-shrink:0;font-size:.95rem;line-height:1.4}
+  /* ---------- VALUE STACK ---------- */
+  .stack{max-width:560px;margin-top:28px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+  .stack-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line);font-size:.94rem;color:var(--ink)}
+  .stack-row:last-child{border-bottom:none}
+  .stack-val{font-weight:700;color:var(--muted);white-space:nowrap}
+  .stack-row.stack-sum{background:var(--surface)}
+  .stack-row.stack-total{background:var(--ink);color:#fff;font-weight:800;font-size:1.05rem}
+  .stack-row.stack-total .stack-val{color:var(--lime)}
+  .bonus-line{
+    font-size:.82rem;font-weight:600;color:#3d5406;background:var(--lime-soft);
+    border:1px solid #D9F096;border-radius:8px;padding:9px 12px;margin-bottom:14px;line-height:1.5;
+  }
+  .buy-btn{
+    display:flex;align-items:center;justify-content:center;min-height:52px;
+    width:100%;background:var(--ink);color:#fff;text-decoration:none;
+    font-weight:700;font-size:1rem;border-radius:12px;
+    transition:transform .15s,box-shadow .15s;
+  }
+  .buy-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+  .buy-btn:active{transform:translateY(0)}
+  .under-btn{margin-top:10px;text-align:center;font-size:.8rem;color:var(--muted)}
+  .under-btn a{color:var(--muted)}
+  /* ---------- PROOF STRIP ---------- */
+  .proof{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .proof-grid{display:grid;grid-template-columns:1fr;gap:0}
+  .proof-item{padding:22px 0;text-align:center;border-bottom:1px solid var(--line)}
+  .proof-item:last-child{border-bottom:none}
+  .proof-item b{display:block;font-size:1.5rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+  .proof-item span{font-size:.8rem;color:var(--muted);font-weight:500}
+  /* ---------- SECTIONS ---------- */
+  section{padding:56px 0}
+  .kicker{
+    display:inline-block;font-weight:700;font-size:.72rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:14px;
+  }
+  h2{font-size:clamp(1.5rem,5vw,2.2rem);margin-bottom:14px;max-width:680px}
+  .lead{font-size:1rem;max-width:600px}
+  /* ---------- WHAT'S INSIDE ---------- */
+  .inside-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:32px}
+  .inside-item{
+    display:flex;gap:14px;align-items:flex-start;background:var(--bg);
+    border:1px solid var(--line);border-radius:var(--r);padding:18px 18px;box-shadow:var(--shadow);
+  }
+  .inside-num{
+    flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--lime);
+    color:var(--ink);font-weight:800;font-size:.85rem;
+    display:inline-flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+  .inside-item b{color:var(--ink);font-size:.95rem;display:block;margin-bottom:2px}
+  .inside-item p{font-size:.88rem;color:var(--body)}
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+  .about-photo{width:100%;max-width:340px;border-radius:var(--r);box-shadow:var(--shadow-lg)}
+  .about-copy p{margin-bottom:13px;font-size:.97rem}
+  .about-copy strong{color:var(--ink);font-weight:600}
+  .mini-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .mini-stat{
+    background:var(--surface);border:1px solid var(--line);border-radius:99px;
+    padding:7px 14px;font-weight:600;font-size:.8rem;color:var(--ink);
+  }
+  /* ---------- REVIEWS: Instagram DM style ---------- */
+  .reviews-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px}
+  .dm{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;
+  }
+  .dm-head{
+    padding:11px 16px;border-bottom:1px solid var(--line);text-align:center;
+    background:#FAFAFA;
+  }
+  .dm-name{font-weight:600;font-size:.84rem;color:var(--ink);line-height:1.2}
+  .dm-body{padding:16px 14px 20px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .dm-time{text-align:center;font-size:.68rem;color:var(--muted);margin-bottom:8px}
+  .dm-bubble{
+    position:relative;align-self:flex-start;max-width:94%;
+    background:#EFEFEF;color:#111;border-radius:18px 18px 18px 5px;
+    padding:10px 14px;font-size:.88rem;line-height:1.5;
+  }
+  .dm-bubble + .dm-bubble{border-radius:5px 18px 18px 18px;margin-top:1px}
+  .dm-bubble .dm-like{
+    position:absolute;bottom:-11px;left:10px;background:#fff;border:1px solid var(--line);
+    border-radius:99px;font-size:.66rem;padding:1px 5px;box-shadow:var(--shadow);
+  }
+  /* ---------- FAQ ---------- */
+  .faq{max-width:680px;margin-top:28px}
+  details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--bg)}
+  summary{
+    padding:16px 18px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.95rem;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--muted);font-size:1.2rem;flex-shrink:0}
+  details[open] summary::after{content:"–"}
+  details p{padding:0 18px 16px;font-size:.92rem}
+  /* ---------- FINAL CTA ---------- */
+  .final{background:var(--surface);border-top:1px solid var(--line);text-align:center}
+  .final h2{margin-left:auto;margin-right:auto}
+  .final .lead{margin:0 auto 28px}
+  .final .buy-card{max-width:440px;margin:0 auto;text-align:left}
+  footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-size:.82rem;color:var(--muted)}
+  footer a{color:var(--muted)}
+  /* ---------- STICKY MOBILE CTA ---------- */
+  .mobile-cta{
+    position:fixed;bottom:0;left:0;right:0;z-index:50;
+    background:rgba(255,255,255,.96);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    display:flex;align-items:center;gap:14px;
+  }
+  .mobile-cta .m-price{font-weight:800;font-size:1.25rem;color:var(--ink)}
+  .mobile-cta .m-note{font-size:.72rem;color:var(--muted);line-height:1.2}
+  .mobile-cta a{
+    flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;
+    background:var(--ink);color:#fff;text-decoration:none;font-weight:700;
+    font-size:.95rem;border-radius:12px;
+  }
+  /* ---------- SMALL PHONES ---------- */
+  @media(max-width:560px){
+    .logo span{display:none}
+    .nav-cta{font-size:.8rem;padding:9px 14px}
+    .badge{font-size:.7rem;padding:6px 12px}
+    header{padding:36px 0 32px}
+    .price{font-size:2.1rem}
+    .buy-card{padding:24px 18px}
+    section{padding:48px 0}
+    .trust-chip .t-sub{font-size:.74rem}
+  }
+  /* ---------- ANIMATIONS ---------- */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  header .trust-chip,header .badge,header h1,header .sub,header .checks,header .buy-card{animation:fadeUp .5s ease-out both}
+  header h1{animation-delay:.05s}header .sub{animation-delay:.1s}
+  header .checks{animation-delay:.15s}header .buy-card{animation-delay:.12s}
+  /* staggered check-ins */
+  header .checks li{opacity:0;animation:fadeUp .45s ease-out both}
+  header .checks li:nth-child(1){animation-delay:.25s}
+  header .checks li:nth-child(2){animation-delay:.33s}
+  header .checks li:nth-child(3){animation-delay:.41s}
+  header .checks li:nth-child(4){animation-delay:.49s}
+  header .checks li:nth-child(5){animation-delay:.57s}
+  /* scroll reveals */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease-out,transform .6s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+  /* card lift on hover */
+  .dm{transition:transform .2s ease,box-shadow .2s ease}
+  .dm:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  /* CTA shine sweep, runs every few seconds to pull the eye */
+  .buy-btn{position:relative;overflow:hidden}
+  .buy-btn::after{
+    content:"";position:absolute;top:0;bottom:0;left:-80%;width:50%;
+    background:linear-gradient(105deg,transparent,rgba(255,255,255,.35),transparent);
+    transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite;
+  }
+  @keyframes shine{0%,72%{left:-80%}88%,100%{left:130%}}
+  /* gentle heartbeat on the sticky mobile CTA button */
+  @keyframes heartbeat{0%,86%,100%{transform:scale(1)}90%{transform:scale(1.03)}94%{transform:scale(1)}}
+  .mobile-cta a{animation:heartbeat 5s ease-in-out infinite;position:relative;overflow:hidden}
+  .mobile-cta a::after{
+    content:"";position:absolute;top:0;bottom:0;left:-80%;width:50%;
+    background:linear-gradient(105deg,transparent,rgba(255,255,255,.3),transparent);
+    transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite;
+  }
+  /* sticky mobile CTA slides in only after the hero buy card scrolls away */
+  .mobile-cta{transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .mobile-cta.show{transform:translateY(0)}
+  @media (prefers-reduced-motion: reduce){
+    header .trust-chip,header .badge,header h1,header .sub,header .checks,header .buy-card,header .checks li{animation:none;opacity:1}
+    .reveal{opacity:1;transform:none;transition:none}
+    .marker{background-size:100% 32%;transition:none}
+    .buy-btn::after,.mobile-cta a::after{animation:none;display:none}
+    .mobile-cta a{animation:none}
+    .mobile-cta{transform:none;transition:none}
+  }
+  /* ============ TABLET & UP ============ */
+  @media(min-width:768px){
+    body{padding-bottom:0}
+    .mobile-cta{display:none}
+    header{padding:72px 0 64px}
+    .proof-grid{grid-template-columns:repeat(3,1fr)}
+    .proof-item{border-bottom:none;border-right:1px solid var(--line);padding:26px 0}
+    .proof-item:last-child{border-right:none}
+    .reviews-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+    .inside-grid{grid-template-columns:1fr 1fr;gap:16px}
+    section{padding:80px 0}
+    .about-grid{grid-template-columns:.75fr 1.25fr;gap:56px}
+    .about-photo{max-width:none}
+  }
+  /* ============ DESKTOP ============ */
+  @media(min-width:1024px){
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start}
+    .buy-card{position:sticky;top:84px}
+    .checks{margin-bottom:0}
+  }
 </style>
 </head>
 <body>
-<nav class="nav"><div class="wrap nav-inner"><a class="brand" href="#top">Kotryna Bass</a><a class="nav-link" href="#buy">Get the guide — $17</a></div></nav>
-
-<header class="hero" id="top"><div class="wrap hero-grid">
-  <div class="hero-copy">
-    <span class="eyebrow">A practical Claude workflow for beginners</span>
-    <h1>Turn what you already know into a digital product you can <em>actually launch.</em></h1>
-    <p class="hero-lead">Six guided prompts help you choose the idea, shape the product, write the first draft, price it and prepare the launch — without spending weeks watching lessons or staring at a blank page.</p>
-    <div class="hero-actions"><a class="btn" href="https://kotrynabass.podia.com/first-digital-product-with-claude/buy">Get instant access for $17</a><a class="text-link" href="#inside">See what’s inside</a></div>
-    <div class="micro">Instant PDF download · works with Claude’s free account · 14-day guarantee</div>
+<div class="nav-bar">
+  <div class="wrap">
+    <nav>
+      <div class="logo">Kotryna Bass <span>· Digital Product with Claude</span></div>
+      <a class="nav-cta" href="#buy">Get access for $17</a>
+    </nav>
   </div>
-  <div class="hero-photo-wrap">
-    <img class="hero-photo" src="assets/kotryna-hero.jpg" alt="Kotryna Bass working at her desk" width="900" height="1125">
-    <div class="photo-note"><strong>I built the first version in about 40 minutes.</strong>It sold seven times on the first day. This guide gives you the exact workflow I used.</div>
-  </div>
-</div></header>
-
-<div class="cred"><div class="wrap cred-grid">
-  <div class="cred-item"><b>Selling since 2012</b><span>real digital-product experience</span></div>
-  <div class="cred-item"><b>10,000+ sales</b><span>across digital products</span></div>
-  <div class="cred-item"><b>2,000+ students</b><span>taught worldwide</span></div>
-  <div class="cred-item"><b>One focused session</b><span>not another long course</span></div>
-</div></div>
-
-<section class="note-section"><div class="wrap note-card">
-  <div><span class="eyebrow">Why I made this</span><h2>A simple way to stop researching and finally make the thing.</h2></div>
-  <div class="note-copy">
-    <p>I have been selling digital products for more than a decade. The part that keeps people stuck is rarely a lack of knowledge. It is having too many possible directions and no clear sequence for turning one idea into something finished.</p>
-    <p>Claude changed how quickly I could move from thought to first draft. But only when I stopped giving it vague prompts and started treating it like a capable collaborator that needed the right context, in the right order.</p>
-    <p>This guide is that order. It is intentionally short, practical and built to be used while you create — not read and forgotten.</p>
-    <div class="note-signoff">Kotryna</div>
-  </div>
-</div></section>
-
-<section id="inside"><div class="narrow">
-  <div class="steps-head"><span class="eyebrow">Inside the guide</span><h2>Six prompts that move one product from idea to launch.</h2><p>You run them in order. Each prompt uses the answer from the one before it, so the output becomes more specific as you go.</p></div>
-  <div class="steps">
-    <div class="step"><div class="step-num">01</div><div><h3>Find the idea</h3><p>Pull a realistic low-ticket product from your skills, experience and the problems you have already solved.</p></div></div>
-    <div class="step"><div class="step-num">02</div><div><h3>Build the structure</h3><p>Turn that idea into a clear outcome, buyer and section-by-section product outline.</p></div></div>
-    <div class="step"><div class="step-num">03</div><div><h3>Create the first draft</h3><p>Write the product one useful section at a time instead of asking AI for one giant generic document.</p></div></div>
-    <div class="step"><div class="step-num">04</div><div><h3>Make it sound human</h3><p>Refine the language, examples and tone so it feels useful and specific — not AI-generated.</p></div></div>
-    <div class="step"><div class="step-num">05</div><div><h3>Choose the price</h3><p>Set a sensible entry price based on the problem, outcome, audience and depth of the product.</p></div></div>
-    <div class="step"><div class="step-num">06</div><div><h3>Prepare the launch</h3><p>Create the listing and first launch messages so you are ready to publish instead of stopping at the draft.</p></div></div>
-  </div>
-</div></section>
-
-<section class="offer-section" id="buy"><div class="wrap offer-layout">
-  <div class="offer-copy">
-    <span class="eyebrow">What you will finish with</span>
-    <h2>A real first version — not another folder of saved prompts.</h2>
-    <p>By the end, you will have the core pieces needed to package and publish a simple digital product. The guide does not promise instant income. It gives you a clear, tested way to finish and launch faster.</p>
-    <div class="outcomes">
-      <div class="outcome"><h3>A focused product idea</h3><p>With a specific buyer, problem and result.</p></div>
-      <div class="outcome"><h3>A structured first draft</h3><p>Built from what you actually know, not generic filler.</p></div>
-      <div class="outcome"><h3>A price and launch plan</h3><p>Including your listing and first announcement copy.</p></div>
+</div>
+<header>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="trust-chip">
+          <img referrerpolicy="no-referrer" src="https://static.showit.co/800/7KK7bNOsQb--OQK50IrOrA/168573/dsc09446_1.jpg" alt="Kotryna Bass">
+          <div>
+            <div class="t-name">Kotryna Bass</div>
+            <div class="t-sub">12 years online · 10,000+ products sold · 2,000+ students taught</div>
+          </div>
+        </div>
+        <div class="badge">⚡ Instant download · works with Claude's free account</div>
+        <h1>Your first digital product, live and ready to sell <span class="marker" id="marker">in about 40 minutes.</span></h1>
+        <p class="sub">Everything I know about creating and selling digital products, distilled into <strong>six Claude prompts</strong>, my pricing strategy, and the exact launch sequence I use myself. Twelve years and <strong>10,000+ products sold</strong> went into this system. Running it takes you one afternoon.</p>
+        <ul class="checks">
+          <li>Go from blank page to a product people can actually buy in about 40 minutes, one quiet evening is enough</li>
+          <li>Copy my exact Claude prompts word for word. You paste, Claude builds</li>
+          <li>No audience or following required, it works even if nobody knows you yet</li>
+          <li>No tech skills, no website, nothing to figure out</li>
+          <li>Works with Claude's free account, so your only cost is this page</li>
+        </ul>
+      </div>
+      <div>
+        <div class="buy-card" id="buy">
+          <img class="card-photo" referrerpolicy="no-referrer" src="https://static.showit.co/800/7KK7bNOsQb--OQK50IrOrA/168573/dsc09446_1.jpg" alt="Kotryna Bass at her desk">
+          <h3>Your First Digital Product with Claude</h3>
+          <p class="promise">The six prompts, my pricing rules, and the launch steps. In your inbox the minute you order — you could start tonight.</p>
+          <span class="save-tag">Launch price · save $30</span>
+          <div class="price-row">
+            <span class="price-old">$47</span>
+            <span class="price">$17</span>
+            <span class="price-note">one-time · instant access</span>
+          </div>
+          <div class="guarantee"><span class="g-ico">✅</span><span>14-day money-back guarantee. Run every prompt, and if it doesn't help you build something you're proud of, email me and I'll refund you. No hard feelings.</span></div>
+          <div class="bonus-line">🎁 Free bonus with every order this week: my Daily Sales Method programme. It's the system I use to get sales daily — yours free until Sunday, then it's gone.</div>
+          <a class="buy-btn" href="https://kotrynabass.podia.com/first-digital-product-with-claude/buy">Get Instant Access — $17 →</a>
+          <div class="under-btn">🔒 Secure checkout · instant download · 14-day guarantee</div>
+        </div>
+      </div>
     </div>
   </div>
-  <aside class="guide-card">
-    <span class="eyebrow">Instant digital download</span>
-    <h3>Your First Digital Product with Claude</h3>
-    <p>A concise copy-and-paste guide you use alongside Claude.</p>
-    <ul class="guide-list">
-      <li>Six complete prompts in the right order</li>
-      <li>Instructions for adapting each answer</li>
-      <li>My practical pricing guidance</li>
-      <li>A final launch checklist</li>
-      <li>Bonus: Daily Sales Method</li>
-    </ul>
-    <div class="price-line"><span class="old">$47</span><span class="price">$17</span><span class="once">one-time</span></div>
-    <div class="bonus">The Daily Sales Method bonus shows you what to focus on after your product is live.</div>
-    <a class="btn" style="width:100%" href="https://kotrynabass.podia.com/first-digital-product-with-claude/buy">Get the guide now</a>
-    <div class="guarantee">Use the prompts within 14 days. If they do not help you create something you are proud to sell, email me for a refund.</div>
-  </aside>
-</div></section>
-
-<section><div class="wrap for-grid">
-  <div class="for-box yes"><h3>This is for you if…</h3><ul><li>You want to make a simple first digital product</li><li>You have useful experience but cannot see the offer yet</li><li>You work better with a clear sequence than a big course</li><li>You are willing to edit, personalise and publish the result</li></ul></div>
-  <div class="for-box no"><h3>This is probably not for you if…</h3><ul><li>You want a finished business created without your input</li><li>You are looking for a technical or advanced AI course</li><li>You expect guaranteed sales from one product</li><li>You prefer to keep researching instead of launching</li></ul></div>
-</div></section>
-
-<section class="about"><div class="wrap about-grid">
-  <img class="about-photo" src="assets/kotryna-about.jpg" alt="Kotryna Bass" width="800" height="1000">
-  <div class="about-copy"><span class="eyebrow">About me</span><h2>Hi, I’m Kotryna.</h2><p>I started selling digital products in 2012, before they became the business model everyone was talking about. Since then, I have sold more than 10,000 products and taught over 2,000 students how to create income online.</p><p>I am not interested in making the process sound more complicated than it is. A useful first product does not need months of planning. It needs a clear problem, a practical result and the courage to put version one in front of people.</p><p>This is the exact approach I use in my own business today.</p></div>
-</div></section>
-
-<section><div class="narrow faq">
-  <div class="steps-head"><span class="eyebrow">Questions</span><h2>Before you buy.</h2></div>
-  <details><summary>What exactly do I receive?</summary><p>An instant-download PDF containing the six complete prompts, guidance for using each answer, my pricing notes and a final launch checklist. The Daily Sales Method is included as a bonus.</p></details>
-  <details><summary>Can I use Claude’s free account?</summary><p>Yes. The workflow works with the free version of Claude. A paid plan may give you higher usage limits, but it is not required.</p></details>
-  <details><summary>Do I need an audience?</summary><p>No. The guide helps you create the product and prepare the launch. You can begin without an existing audience, although you will still need to actively share and market what you make.</p></details>
-  <details><summary>Will Claude create the whole product for me?</summary><p>Claude helps you think, structure and draft much faster. Your experience, judgement and edits are what make the final product credible and worth buying.</p></details>
-  <details><summary>Is the 40-minute result guaranteed?</summary><p>No. About 40 minutes was my own first build. Your timing depends on the product and how much editing you choose to do. The goal is a much faster first version, not a stopwatch promise.</p></details>
-  <details><summary>What is the refund policy?</summary><p>Run the prompts within 14 days. If they do not help you create something you are proud to sell, email me and I will refund your purchase.</p></details>
-</div></section>
-
-<section class="final"><div class="narrow"><span class="eyebrow">Ready when you are</span><h2>Open prompt one tonight. Finish with something real.</h2><p>Six prompts, one focused workflow and a clear path from “I have no idea what to make” to a product you can prepare for sale.</p><a class="btn" href="https://kotrynabass.podia.com/first-digital-product-with-claude/buy">Get instant access for $17</a><div class="micro">One-time payment · instant PDF · 14-day guarantee</div></div></section>
-
-<footer><div class="wrap footer-inner"><span>© 2026 Kotryna Bass</span><span><a href="https://kotrynabass.com">kotrynabass.com</a></span></div></footer>
+</header>
+<div class="proof">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="proof-item reveal"><b data-count>12 years</b><span>selling digital products online</span></div>
+      <div class="proof-item reveal d1"><b data-count>10,000+</b><span>digital products sold since 2012</span></div>
+      <div class="proof-item reveal d2"><b data-count>~40 min</b><span>from idea to live product</span></div>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <div class="kicker">Why this works</div>
+    <h2>You don't have a creating problem. You have a starting problem.</h2>
+    <p class="lead">Every "make money online" course hands you homework. This hands you the answers. Six prompts, in order. You paste them into Claude and watch your product get written, structured, priced and packaged right in front of you. And if a little voice is saying "but I have nothing to teach" — that voice is exactly what the first prompt was built for. Everyone knows something worth paying for. Most people just can't see their own.</p>
+  </div>
+</section>
+<section style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">What's inside</div>
+    <h2>The six prompts, in the order you'll run them.</h2>
+    <p class="lead">This is the actual workflow, not a mystery box. You get a PDF guide with each prompt ready to copy, plus my notes on what to tweak for your topic.</p>
+    <div class="inside-grid">
+      <div class="inside-item"><span class="inside-num">1</span><div><b>The Idea Finder</b><p>Pulls a sellable product idea out of what you already know, even if you're sure you have nothing to teach.</p></div></div>
+      <div class="inside-item"><span class="inside-num">2</span><div><b>The Outline Builder</b><p>Turns that idea into a complete product structure while you watch.</p></div></div>
+      <div class="inside-item"><span class="inside-num">3</span><div><b>The Content Creator</b><p>Writes the full first draft of your product, section by section.</p></div></div>
+      <div class="inside-item"><span class="inside-num">4</span><div><b>The Polish Pass</b><p>Makes it read like you on your best day, not like a robot.</p></div></div>
+      <div class="inside-item"><span class="inside-num">5</span><div><b>The Pricing Prompt</b><p>Finds the price point that sells, with my pricing rules from 12 years of testing.</p></div></div>
+      <div class="inside-item"><span class="inside-num">6</span><div><b>The Launch Sequence</b><p>Writes your product listing and first announcement posts, ready to publish.</p></div></div>
+    </div>
+    <p class="lead" style="margin-top:24px;font-size:.9rem;color:var(--muted)">Delivered as an instant-download PDF. Works with the free Claude account at claude.ai.</p>
+  </div>
+</section>
+<section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <img class="about-photo" referrerpolicy="no-referrer" src="https://static.showit.co/800/SB8wgJGwQragdnduBx8gZQ/168573/dsc02092.jpg" alt="Kotryna Bass"
+             onerror="this.onerror=null;this.src='https://static.showit.co/400/SB8wgJGwQragdnduBx8gZQ/168573/dsc02092.jpg'">
+      </div>
+      <div class="about-copy">
+        <div class="kicker">Who's behind this</div>
+        <h2>hey, I'm Kotryna.</h2>
+        <p>In 2012, I sat down at a laptop with no audience, no business degree and no idea how to make money online. Just a strong suspicion that trading hours for a salary wasn't the only way to live.</p>
+        <p>Digital products were my way out. Since then I've sold over <strong>10,000 of them</strong>, built an e-commerce brand from zero to <strong>$500k in revenue</strong>, and taught <strong>2,000+ students</strong> to build income of their own. Every product used to take me weeks of writing, designing, and second-guessing.</p>
+        <p>Then Claude changed the math. What took me weeks now takes under an hour, and the workflow on this page is the exact one I use. Not theory. Not recycled advice. <strong>The actual prompts, in the actual order, from someone who's been selling digital products for twelve years.</strong></p>
+        <div class="mini-stats">
+          <span class="mini-stat">10,000+ products sold</span>
+          <span class="mini-stat">2,000+ students taught</span>
+          <span class="mini-stat">Selling online since 2012</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="kicker">Why you can trust this</div>
+    <h2>Not theory. The exact workflow I use myself.</h2>
+    <p class="lead">I'd rather show you proof you can actually check than paste in reviews you can't. Here's what's real:</p>
+    <!-- REAL PROOF ONLY. When you have genuine student results, paste their screenshots (with names + permission) here. Do not publish invented testimonials — it breaks trust and it's against ad rules. -->
+    <div class="reviews-grid">
+      <div class="inside-item reveal"><span class="inside-num">✓</span><div><b>10,000+ products sold</b><p>Real digital products sold since 2012. The six prompts on this page are the workflow I use today.</p></div></div>
+      <div class="inside-item reveal d1"><span class="inside-num">✓</span><div><b>2,000+ students taught</b><p>I've walked thousands of people through building and selling a product of their own.</p></div></div>
+      <div class="inside-item reveal d2"><span class="inside-num">✓</span><div><b>$500k brand from zero</b><p>No audience, no degree, no head start — just this digital-product playbook, applied.</p></div></div>
+    </div>
+  </div>
+</section>
+<section style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">Questions, answered</div>
+    <h2>Before you ask.</h2>
+    <div class="faq">
+      <details>
+        <summary>What exactly do I get, and in what format?</summary>
+        <p>An instant-download PDF with the six prompts ready to copy, my notes on adapting each one to your topic, the pricing rules I use, and the launch checklist. Everything at once, no drip-fed modules. And if you can copy and paste, you have every skill this requires.</p>
+      </details>
+      <details>
+        <summary>Does it work with the free Claude account?</summary>
+        <p>Yes. Everything works with the free account at claude.ai. A paid plan just removes daily usage limits, it changes nothing about the workflow.</p>
+      </details>
+      <details>
+        <summary>What if I'm not happy with it?</summary>
+        <p>You're covered by a 14-day money-back guarantee. Run all six prompts, use the pricing rules, follow the launch steps — and if it doesn't help you build something you're proud of, just email me within 14 days and I'll refund you in full. The risk is entirely on me, which is how confident I am this works.</p>
+      </details>
+    </div>
+  </div>
+</section>
+<section style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">The math</div>
+    <h2>Everything you'd normally pay for, for the price of lunch.</h2>
+    <p class="lead">I could sell each of these on its own. Bundled together, at launch, they're $17.</p>
+    <div class="stack">
+      <div class="stack-row"><span>The 6 copy-paste Claude prompts (the full workflow)</span><span class="stack-val">$97</span></div>
+      <div class="stack-row"><span>My pricing rules from 12 years of testing</span><span class="stack-val">$47</span></div>
+      <div class="stack-row"><span>The launch sequence — listing + first posts, written for you</span><span class="stack-val">$47</span></div>
+      <div class="stack-row"><span>🎁 Bonus: Daily Sales Method programme (this week only)</span><span class="stack-val">$97</span></div>
+      <div class="stack-row stack-sum"><span>Total value</span><span class="stack-val">$288</span></div>
+      <div class="stack-row stack-total"><span>Your price today</span><span class="stack-val">$17</span></div>
+    </div>
+  </div>
+</section>
+<section class="final">
+  <div class="wrap">
+    <h2>You've seen exactly what's inside.</h2>
+    <p class="lead">Six prompts, the pricing rules, and the launch steps. If it helps you finish the thing you've been putting off, it's the best $17 you'll spend this year.</p>
+    <div class="buy-card">
+      <h3>Your First Digital Product with Claude</h3>
+      <p class="promise">The six prompts, my pricing rules, and the launch steps. In your inbox the minute you order — you could start tonight.</p>
+      <span class="save-tag">Launch price · save $30</span>
+      <div class="price-row">
+        <span class="price-old">$47</span>
+        <span class="price">$17</span>
+        <span class="price-note">one-time · instant access</span>
+      </div>
+      <div class="guarantee"><span class="g-ico">✅</span><span>14-day money-back guarantee. Run every prompt, and if it doesn't help you build something you're proud of, email me and I'll refund you. No hard feelings.</span></div>
+      <div class="bonus-line">🎁 Free bonus with every order this week: my Daily Sales Method programme. It's the system I use to get sales daily — yours free until Sunday, then it's gone.</div>
+      <a class="buy-btn" href="https://kotrynabass.podia.com/first-digital-product-with-claude/buy">Get Instant Access — $17 →</a>
+      <div class="under-btn">🔒 Secure checkout · instant download · 14-day guarantee</div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">© 2026 Kotryna Bass · <a href="https://kotrynabass.com">kotrynabass.com</a> · <a href="#">Privacy Policy</a></div>
+</footer>
+<!-- Sticky mobile CTA -->
+<div class="mobile-cta">
+  <div>
+    <div class="m-price">$17</div>
+    <div class="m-note">14-day guarantee</div>
+  </div>
+  <a href="https://kotrynabass.podia.com/first-digital-product-with-claude/buy">Get Instant Access →</a>
+</div>
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // auto-tag section content for scroll reveal
+  if(!reduce){
+    document.querySelectorAll('section .kicker, section h2, section .lead, .about-copy p, .mini-stats, .about-photo, .final .buy-card').forEach(function(el){
+      el.classList.add('reveal');
+    });
+  }
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){
+    if(reduce){el.classList.add('in');}else{io.observe(el);}
+  });
+  // headline marker sweep on load
+  var m=document.getElementById('marker');
+  if(m){requestAnimationFrame(function(){m.classList.add('on');});}
+  // count-up on proof numbers
+  function countUp(el){
+    var raw=el.textContent;
+    var match=raw.match(/([\d,]+)/);
+    if(!match)return;
+    var target=parseInt(match[1].replace(/,/g,''),10);
+    var prefix=raw.slice(0,match.index);
+    var suffix=raw.slice(match.index+match[1].length);
+    var hasComma=match[1].indexOf(',')>-1;
+    var t0=null,dur=1100;
+    function fmt(n){return hasComma?n.toLocaleString('en-US'):''+n}
+    function step(t){
+      if(!t0)t0=t;
+      var p=Math.min((t-t0)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=prefix+fmt(Math.round(target*eased))+suffix;
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var io2=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        if(!reduce)countUp(e.target);
+        io2.unobserve(e.target);
+      }
+    });
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){io2.observe(el);});
+  // sticky mobile CTA appears only after the hero buy card is out of view
+  var buy=document.getElementById('buy');
+  var bar=document.querySelector('.mobile-cta');
+  if(buy&&bar){
+    var io3=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        bar.classList.toggle('show', !e.isIntersecting && window.scrollY>200);
+      });
+    },{threshold:0});
+    io3.observe(buy);
+  }
+})();
+</script>
 </body>
 </html>
